@@ -32,7 +32,14 @@
                             <outlet property="delegate" destination="rUP-vm-X10" id="9mW-xj-btk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="ZenCalm List" id="hoB-aW-u9Q"/>
+                    <navigationItem key="navigationItem" title="ZenCalm List" id="hoB-aW-u9Q">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="4S9-3P-d9b">
+                            <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="addButtonPressed:" destination="rUP-vm-X10" id="Ocb-Qy-Lfn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LkK-uU-D7B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
