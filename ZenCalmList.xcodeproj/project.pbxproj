@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B2BBD2B21D8A337001EE3A2 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1B2BBD2921D8A337001EE3A2 /* DataModel.xcdatamodeld */; };
 		1BD042B921DC64AE00CAC0BE /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD042B821DC64AE00CAC0BE /* CategoryTableViewController.swift */; };
+		1BD042BD21DC928B00CAC0BE /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD042BC21DC928B00CAC0BE /* Item.swift */; };
+		1BD042BF21DC929400CAC0BE /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD042BE21DC929400CAC0BE /* Category.swift */; };
 		1BDDF5E621D4A41D00271069 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDDF5E521D4A41D00271069 /* AppDelegate.swift */; };
 		1BDDF5E821D4A41D00271069 /* ToDoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDDF5E721D4A41D00271069 /* ToDoListTableViewController.swift */; };
 		1BDDF5EB21D4A41D00271069 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BDDF5E921D4A41D00271069 /* Main.storyboard */; };
@@ -18,8 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1B2BBD2A21D8A337001EE3A2 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		1BD042B821DC64AE00CAC0BE /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
+		1BD042BC21DC928B00CAC0BE /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		1BD042BE21DC929400CAC0BE /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		1BDDF5E221D4A41D00271069 /* ZenCalmList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZenCalmList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BDDF5E521D4A41D00271069 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BDDF5E721D4A41D00271069 /* ToDoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListTableViewController.swift; sourceTree = "<group>"; };
@@ -47,7 +49,8 @@
 		1B2BBD2221D7584C001EE3A2 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				1B2BBD2921D8A337001EE3A2 /* DataModel.xcdatamodeld */,
+				1BD042BE21DC929400CAC0BE /* Category.swift */,
+				1BD042BC21DC928B00CAC0BE /* Item.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -129,7 +132,8 @@
 				1BDDF5DE21D4A41D00271069 /* Sources */,
 				1BDDF5DF21D4A41D00271069 /* Frameworks */,
 				1BDDF5E021D4A41D00271069 /* Resources */,
-				274AF011E3196CBA6D9E601D /* [CP] Embed Pods Frameworks */,
+				E6712539448223AC00BC4BE4 /* [CP] Embed Pods Frameworks */,
+				D22DF43FC5A24EE160B15FB7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -205,7 +209,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		274AF011E3196CBA6D9E601D /* [CP] Embed Pods Frameworks */ = {
+		D22DF43FC5A24EE160B15FB7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZenCalmList/Pods-ZenCalmList-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6712539448223AC00BC4BE4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -232,10 +251,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BD042BD21DC928B00CAC0BE /* Item.swift in Sources */,
 				1BDDF5E821D4A41D00271069 /* ToDoListTableViewController.swift in Sources */,
-				1B2BBD2B21D8A337001EE3A2 /* DataModel.xcdatamodeld in Sources */,
 				1BDDF5E621D4A41D00271069 /* AppDelegate.swift in Sources */,
 				1BD042B921DC64AE00CAC0BE /* CategoryTableViewController.swift in Sources */,
+				1BD042BF21DC929400CAC0BE /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,19 +455,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		1B2BBD2921D8A337001EE3A2 /* DataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				1B2BBD2A21D8A337001EE3A2 /* DataModel.xcdatamodel */,
-			);
-			currentVersion = 1B2BBD2A21D8A337001EE3A2 /* DataModel.xcdatamodel */;
-			path = DataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 1BDDF5DA21D4A41D00271069 /* Project object */;
 }
